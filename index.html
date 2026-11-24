@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -159,7 +160,9 @@
     }
 
     @keyframes run {
-      to { transform: translateX(-100%); }
+      to {
+        transform: translateX(-100%);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -307,7 +310,8 @@
          Maka kita set width = 100% dari tinggi container,
          caranya: gunakan var dari container melalui aspect-ratio.
          Pendekatan paling sederhana: width & height 100% lalu rotate. */
-      width: 133.33%;   /* 4/3 × 100% ≈ isi penuh frame portrait setelah rotasi */
+      width: 133.33%;
+      /* 4/3 × 100% ≈ isi penuh frame portrait setelah rotasi */
       height: 100%;
       object-fit: cover;
       transform: translate(-50%, -50%) rotate(90deg);
@@ -389,12 +393,15 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ==================== HEADER ==================== -->
   <div class="wrap">
     <header>
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvAAAAEACAYAAADV3EL+AAEAAElEQVR4nOz9W3MbSZbni/7X8ogAQICkKJHUNZOZTOYNWZk92ciqqZ5zdlPHzph1tVk+jQ3Kxqxeen8Slc7HmKcx20+7OGbzooees3MR+2w7U1NT6NxT1WLlhckUlVJKIilRJAECiAj3dR7CAwwEAYoUKYmS/GdGkQICAQ8PD/fl6wo4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw/HGQS+7AQ6Hw+FwOBwvgVQGkgGvYcB7DscgBo2j7OuD3js2fNIndDgcDofD4TjlUL1e53q9zugXtKhWq3nz8/MKTsnpeDrZcTTsdUIibxNOcEx5J3Uih8PhcDgcjleFlZWVVOgy+feazWZe0HKaecdAMuNIMj8AgLW1tWHa+WPjBHiHw+FwOBxvJO12O9WO9oT42dlZAwCNRgPY81TgWq1G9nUDJ8A7kjFAQDKO5ufn+erVq+b69esEQBYWFiR7zEnjBHiHw+FwOBxvHJVKRawAn/4YJILXoMPlyy8b9NvfQoic8O7oIbOzs7S2tkbNZpOWlpYIe5u7rACfdZ9x48fhcDgcDsebRNbNwZ+d/WyiWIzHRKTAzEakE/m+FwOAMYaBIowxFMexVkqZTif5YKEgZIwhZnYuEW8cRUTRjgbQ7XQ6zbt373axF0cxzFWGkWjiMT09LQsLC8cS4p0G3uFwOBwOxxvJZ599FrTb+pyIXCKiCWOMMsYzIhyKCIswAyEAwBgyIiJBoIgIorUGwND65V6D48XBzCwCAsLQ9/0tItpgZpmbmzPLy8sh+oNW88J5KuCfSAp3J8A7HA6Hw+F4k+hp4I0xFaXoCoCqMbgsghGASYTi5DhigAgAmMUKZ4ZFIEQwRKQBcd4MryAiRxKkbfCyCYhAxsi2CN8W4W+VUlEcxxGACADq9ToBwMLCQtbS0zvP4uJiKsgfy3LjBHiHw+FwOBxvIl4cx+Mi9JYIPiGS94lo1Ap2sRXcGRAr6JEkwrooAAKQBmBEyAnwryZHuW9pRplABEyEDUAKgOyIyGNmfoLMxjCT/33QeU4EN+gcDofD4XC8CaQCFgGQWq020mw2qwD/HSD/N4A+JaJK8r4k/jGJFt5+XJD7/3PN8+04VQgAQ0QeADJGNonwBxH+/xpj/qCUfPfpp1+vLSxAIxkPCoDGYJeaE0kn6TTwDofD4XA43jja7TYTkS+CMhGdEcEEM/sAIDJItnpacVbH6w5ZYwuRGRPBGQBjSklBpM+NSrC/uu8gd5pjcSKO9A6Hw+FwOByOV4AAIHJHOAABQKCHDgAAAABJRU5ErkJggg==" alt="foreach._">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvAAAAEACAYAAADV3EL+AAEAAElEQVR4nOz9W3MbSZbni/7X8ogAQICkKJHUNZOZTOYNWZk92ciqqZ5zdlPHzph1tVk+jQ3Kxqxeen8Slc7HmKcx20+7OGbzooees3MR+2w7U1NT6NxT1WLlhckUlVJKIilRJAECiAj3dR7CAwwEAYoUKYmS/GdGkQICAQ8PD/fl6wo4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw/HGQS+7AQ6Hw+FwOBwvgVQGkgGvYcB7DscgBo2j7OuD3js2fNIndDgcDofD4TjlUL1e53q9zugXtKhWq3nz8/MKTsnpeDrZcTTsdUIibxNOcEx5J3Uih8PhcDgcjleFlZWVVOgy+feazWZe0HKaecdAMuNIMj8AgLW1tWHa+WPjBHiHw+FwOBxvJO12O9WO9oT42dlZAwCNRgPY81TgWq1G9nUDJ8A7kjFAQDKO5ufn+erVq+b69esEQBYWFiR7zEnjBHiHw+FwOBxvHJVKRawAn/4YJILXoMPlyy8b9NvfQoic8O7oIbOzs7S2tkbNZpOWlpYIe5u7rACfdZ9x48fhcDgcDsebRNbNwZ+d/WyiWIzHRKTAzEakE/m+FwOAMYaBIowxFMexVkqZTif5YKEgZIwhZnYuEW8cRUTRjgbQ7XQ6zbt373axF0cxzFWGkWjiMT09LQsLC8cS4p0G3uFwOBwOxxvJZ599FrTb+pyIXCKiCWOMMsYzIhyKCIswAyEAwBgyIiJBoIgIorUGwND65V6D48XBzCwCAsLQ9/0tItpgZpmbmzPLy8sh+oNW88J5KuCfSAp3J8A7HA6Hw+F4k+hp4I0xFaXoCoCqMbgsghGASYTi5DhigAgAmMUKZ4ZFIEQwRKQBcd4MryAiRxKkbfCyCYhAxsi2CN8W4W+VUlEcxxGACADq9ToBwMLCQtbS0zvP4uJiKsgfy3LjBHiHw+FwOBxvIl4cx+Mi9JYIPiGS94lo1Ap2sRXcGRAr6JEkwrooAAKQBmBEyAnwryZHuW9pRplABEyEDUAKgOyIyGNmfoLMxjCT/33QeU4EN+gcDofD4XC8CaQCFgGQWq020mw2qwD/HSD/N4A+JaJK8r4k/jGJFt5+XJD7/3PN8+04VQgAQ0QeADJGNonwBxH+/xpj/qCUfPfpp1+vLSxAIxkPCoDGYJeaE0kn6TTwDofD4XA43jja7TYTkS+CMhGdEcEEM/sAIDJItnpacVbH6w5ZYwuRGRPBGQBjSklBpM+NSrC/uu8gd5pjcSKO9A6Hw+FwOByOV4AAIHJHOAABQKCHDgAAAABJRU5ErkJggg=="
+        alt="foreach._">
       <a class="btn" href="#pesan">Pesan</a>
     </header>
 
@@ -404,7 +411,8 @@
         <span>Satu per satu,</span>
         <span class="c">semua kebagian.</span>
       </h1>
-      <p>Merchandise dari foreach._ untuk kamu yang suka hal-hal rapi, berulang, dan selalu ada yang baru. Setiap produk dibuat dalam batch kecil.</p>
+      <p>Merchandise dari foreach._ untuk kamu yang suka hal-hal rapi, berulang, dan selalu ada yang baru. Setiap produk
+        dibuat dalam batch kecil.</p>
       <div class="cta">
         <a class="btn" href="#koleksi">Lihat koleksi</a>
         <a class="btn ghost" href="#pesan">Cara pesan</a>
@@ -414,7 +422,9 @@
 
   <!-- ==================== MARQUEE ==================== -->
   <div class="loop" aria-hidden="true">
-    <div>Kaos &nbsp;/&nbsp; Hoodie &nbsp;/&nbsp; Tote bag &nbsp;/&nbsp; Stiker &nbsp;/&nbsp; Kaos &nbsp;/&nbsp; Hoodie &nbsp;/&nbsp; Tote bag &nbsp;/&nbsp; Stiker &nbsp;/&nbsp; Kaos &nbsp;/&nbsp; Hoodie &nbsp;/&nbsp; Tote bag &nbsp;/&nbsp; Stiker</div>
+    <div>Kaos &nbsp;/&nbsp; Hoodie &nbsp;/&nbsp; Tote bag &nbsp;/&nbsp; Stiker &nbsp;/&nbsp; Kaos &nbsp;/&nbsp; Hoodie
+      &nbsp;/&nbsp; Tote bag &nbsp;/&nbsp; Stiker &nbsp;/&nbsp; Kaos &nbsp;/&nbsp; Hoodie &nbsp;/&nbsp; Tote bag
+      &nbsp;/&nbsp; Stiker</div>
   </div>
 
   <!-- ==================== MAIN CONTENT ==================== -->
@@ -430,7 +440,7 @@
         <article class="item">
           <div class="shot">
             <svg viewBox="0 0 100 100">
-              <path class="f" d="M30 14l-20 14 8 14 10-6v50h44V36l10 6 8-14-20-14c-4 8-12 10-20 10s-16-2-20-10z"/>
+              <path class="f" d="M30 14l-20 14 8 14 10-6v50h44V36l10 6 8-14-20-14c-4 8-12 10-20 10s-16-2-20-10z" />
             </svg>
           </div>
           <div class="info">
@@ -444,8 +454,8 @@
         <article class="item">
           <div class="shot">
             <svg viewBox="0 0 100 100">
-              <path class="f" d="M32 14l-22 14 8 26 10-4v42h48V50l10 4 8-26-22-14-8 8h-24z"/>
-              <path d="M38 72h24"/>
+              <path class="f" d="M32 14l-22 14 8 26 10-4v42h48V50l10 4 8-26-22-14-8 8h-24z" />
+              <path d="M38 72h24" />
             </svg>
           </div>
           <div class="info">
@@ -459,8 +469,8 @@
         <article class="item">
           <div class="shot">
             <svg viewBox="0 0 100 100">
-              <path class="f" d="M20 34h60l4 56H16z"/>
-              <path d="M36 34c0-24 28-24 28 0"/>
+              <path class="f" d="M20 34h60l4 56H16z" />
+              <path d="M36 34c0-24 28-24 28 0" />
             </svg>
           </div>
           <div class="info">
@@ -474,8 +484,8 @@
         <article class="item">
           <div class="shot">
             <svg viewBox="0 0 100 100">
-              <rect class="f" x="16" y="16" width="68" height="68" rx="14"/>
-              <path d="M62 84c0-12 10-22 22-22"/>
+              <rect class="f" x="16" y="16" width="68" height="68" rx="14" />
+              <path d="M62 84c0-12 10-22 22-22" />
             </svg>
           </div>
           <div class="info">
@@ -524,7 +534,8 @@
         <h2>Tentang foreach._</h2>
       </div>
       <div>
-        <p>foreach._ adalah merchandise yang dirancang dengan logika sederhana: ambil satu ide, ulangi dengan rapi, sampai semua orang yang mau kebagian.</p>
+        <p>foreach._ adalah merchandise yang dirancang dengan logika sederhana: ambil satu ide, ulangi dengan rapi,
+          sampai semua orang yang mau kebagian.</p>
         <p>Desain bersih, bahan nyaman, dan dibuat dalam jumlah terbatas supaya kualitasnya terjaga.</p>
       </div>
     </section>
@@ -570,4 +581,5 @@
   </div>
 
 </body>
+
 </html>
