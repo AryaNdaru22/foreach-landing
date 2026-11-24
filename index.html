@@ -58,6 +58,47 @@
       color: var(--ink);
       font-family: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
       line-height: 1.55;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient watermark logos in background */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url('logo-transparent.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: var(--logo);
+    }
+
+    /* Top-right watermark in hero area */
+    body::before {
+      top: 10%;
+      right: -60px;
+      width: clamp(280px, 38vw, 520px);
+      height: clamp(140px, 20vw, 260px);
+      opacity: 0.035;
+      transform: rotate(-8deg);
+    }
+
+    /* Mid-left watermark in content area */
+    body::after {
+      top: 60%;
+      left: -80px;
+      width: clamp(320px, 42vw, 560px);
+      height: clamp(160px, 22vw, 280px);
+      opacity: 0.025;
+      transform: rotate(6deg);
+    }
+
+    /* Keep layout elements above background watermark */
+    .wrap, .loop, .order {
+      position: relative;
+      z-index: 1;
     }
 
     /* ===================== LAYOUT ===================== */
@@ -399,9 +440,7 @@
   <!-- ==================== HEADER ==================== -->
   <div class="wrap">
     <header>
-      <img
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvAAAAEACAYAAADV3EL+AAEAAElEQVR4nOz9W3MbSZbni/7X8ogAQICkKJHUNZOZTOYNWZk92ciqqZ5zdlPHzph1tVk+jQ3Kxqxeen8Slc7HmKcx20+7OGbzooees3MR+2w7U1NT6NxT1WLlhckUlVJKIilRJAECiAj3dR7CAwwEAYoUKYmS/GdGkQICAQ8PD/fl6wo4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw/HGQS+7AQ6Hw+FwOBwvgVQGkgGvYcB7DscgBo2j7OuD3js2fNIndDgcDofD4TjlUL1e53q9zugXtKhWq3nz8/MKTsnpeDrZcTTsdUIibxNOcEx5J3Uih8PhcDgcjleFlZWVVOgy+feazWZe0HKaecdAMuNIMj8AgLW1tWHa+WPjBHiHw+FwOBxvJO12O9WO9oT42dlZAwCNRgPY81TgWq1G9nUDJ8A7kjFAQDKO5ufn+erVq+b69esEQBYWFiR7zEnjBHiHw+FwOBxvHJVKRawAn/4YJILXoMPlyy8b9NvfQoic8O7oIbOzs7S2tkbNZpOWlpYIe5u7rACfdZ9x48fhcDgcDsebRNbNwZ+d/WyiWIzHRKTAzEakE/m+FwOAMYaBIowxFMexVkqZTif5YKEgZIwhZnYuEW8cRUTRjgbQ7XQ6zbt373axF0cxzFWGkWjiMT09LQsLC8cS4p0G3uFwOBwOxxvJZ599FrTb+pyIXCKiCWOMMsYzIhyKCIswAyEAwBgyIiJBoIgIorUGwND65V6D48XBzCwCAsLQ9/0tItpgZpmbmzPLy8sh+oNW88J5KuCfSAp3J8A7HA6Hw+F4k+hp4I0xFaXoCoCqMbgsghGASYTi5DhigAgAmMUKZ4ZFIEQwRKQBcd4MryAiRxKkbfCyCYhAxsi2CN8W4W+VUlEcxxGACADq9ToBwMLCQtbS0zvP4uJiKsgfy3LjBHiHw+FwOBxvIl4cx+Mi9JYIPiGS94lo1Ap2sRXcGRAr6JEkwrooAAKQBmBEyAnwryZHuW9pRplABEyEDUAKgOyIyGNmfoLMxjCT/33QeU4EN+gcDofD4XC8CaQCFgGQWq020mw2qwD/HSD/N4A+JaJK8r4k/jGJFt5+XJD7/3PN8+04VQgAQ0QeADJGNonwBxH+/xpj/qCUfPfpp1+vLSxAIxkPCoDGYJeaE0kn6TTwDofD4XA43jja7TYTkS+CMhGdEcEEM/sAIDJItnpacVbH6w5ZYwuRGRPBGQBjSklBpM+NSrC/uu8gd5pjcSKO9A6Hw+FwOByOV4AAIHJHOAABQKCHDgAAAABJRU5ErkJggg=="
-        alt="foreach._">
+      <img src="logo-transparent.png" alt="foreach._">
     </header>
 
     <!-- ==================== HERO ==================== -->
