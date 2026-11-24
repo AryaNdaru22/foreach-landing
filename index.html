@@ -9,38 +9,18 @@
   <style>
     /* ===================== CSS VARIABLES ===================== */
     :root {
-      --bg: #eceef0;
-      --ink: #28282a;
-      --line: #c9cdd2;
-      --acc: #2f4bff;
-      --accink: #fff;
-      --card: #f7f8f9;
-      --logo: none;
+      --bg: #0b1325;
+      --bg-alt: #070d1a;
+      --card: #121c33;
+      --ink: #f0f4fc;
+      --ink-muted: #8b9bb4;
+      --line: #1c2b4d;
+      --acc: #38bdf8;
+      --accink: #070d1a;
+      --logo: invert(1);
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #1c1d1f;
-        --ink: #ecedee;
-        --line: #3a3c40;
-        --acc: #7b8cff;
-        --accink: #14151a;
-        --card: #25262a;
-        --logo: invert(1);
-      }
-    }
-
-    :root[data-theme="dark"] {
-      --bg: #1c1d1f;
-      --ink: #ecedee;
-      --line: #3a3c40;
-      --acc: #7b8cff;
-      --accink: #14151a;
-      --card: #25262a;
-      --logo: invert(1);
     }
 
     /* ===================== RESET & BASE ===================== */
@@ -144,9 +124,14 @@
     }
 
     .btn.ghost {
-      background: none;
+      background: transparent;
       color: var(--ink);
-      border: 2px solid var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn.ghost:hover {
+      border-color: var(--acc);
+      color: var(--acc);
     }
 
     /* ===================== HERO ===================== */
@@ -175,6 +160,7 @@
       max-width: 46ch;
       font-size: 1.15rem;
       margin: 0 0 30px;
+      color: var(--ink-muted);
     }
 
     .cta {
@@ -185,8 +171,10 @@
 
     /* ===================== MARQUEE LOOP ===================== */
     .loop {
-      border-top: 2px solid var(--ink);
-      border-bottom: 2px solid var(--ink);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-alt);
+      color: var(--ink-muted);
       overflow: hidden;
       white-space: nowrap;
       font-weight: 800;
@@ -229,6 +217,7 @@
     .sub {
       margin: 0 0 36px;
       max-width: 50ch;
+      color: var(--ink-muted);
     }
 
     /* ===================== PRODUCT GRID ===================== */
@@ -287,7 +276,7 @@
       display: grid;
       gap: 32px;
       grid-template-columns: 1fr;
-      border-top: 2px solid var(--ink);
+      border-top: 1px solid var(--line);
     }
 
     @media (min-width: 760px) {
@@ -299,11 +288,12 @@
     .about p {
       margin: 0 0 14px;
       max-width: 52ch;
+      color: var(--ink-muted);
     }
 
     /* ===================== PREORDER ===================== */
     .preorder {
-      border-top: 2px solid var(--ink);
+      border-top: 1px solid var(--line);
     }
 
     .preorder-badge {
@@ -390,14 +380,25 @@
       place-items: center;
       width: 34px;
       height: 34px;
-      background: var(--ink);
-      color: var(--bg);
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--acc);
+      border-radius: 4px;
+      font-weight: 800;
+    }
+
+    li span {
+      color: var(--ink);
+      display: flex;
+      align-items: center;
     }
 
     /* ===================== ORDER CTA BANNER ===================== */
     .order {
-      background: var(--ink);
-      color: var(--bg);
+      background: var(--card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
       text-align: left;
     }
 
@@ -412,11 +413,12 @@
     .order h2 {
       margin: 0;
       max-width: 16ch;
+      color: var(--ink);
     }
 
     .order .btn {
-      background: var(--bg);
-      color: var(--ink);
+      background: var(--acc);
+      color: var(--accink);
     }
 
     /* ===================== FOOTER ===================== */
@@ -427,10 +429,16 @@
       flex-wrap: wrap;
       gap: 12px;
       justify-content: space-between;
+      color: var(--ink-muted);
     }
 
     footer a {
-      color: inherit;
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--acc);
     }
   </style>
 </head>
